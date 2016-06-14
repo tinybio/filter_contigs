@@ -3,7 +3,7 @@ import sys
 from Bio import SeqIO
 import re
 
-cov_pattern = re.compile("cov_([0-9.]+)_")
+cov_pattern = re.compile("cov_([0-9.]+)")
 
 min_coverage, fasta_file_path = sys.argv[1:]
 with open(fasta_file_path.replace('fa', 'filter{}cov.fa'.format(min_coverage)), 'w') as filtered_fasta:
